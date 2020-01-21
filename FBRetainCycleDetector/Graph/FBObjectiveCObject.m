@@ -3,8 +3,7 @@
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
+ * LICENSE file in the root directory of this source tree.
  */
 
 #import "FBObjectiveCObject.h"
@@ -113,6 +112,9 @@
 {
   if ([self.object respondsToSelector:@selector(valuePointerFunctions)]) {
     NSPointerFunctions *pointerFunctions = [self.object valuePointerFunctions];
+    if (pointerFunctions.acquireFunction == NULL) {
+      return NO;
+    }
     if (pointerFunctions.usesWeakReadAndWriteBarriers) {
       return NO;
     }
@@ -128,6 +130,9 @@
     // If object shows what pointer functions are used, lets try to determine
     // if it's not retaining objects
     NSPointerFunctions *pointerFunctions = [self.object pointerFunctions];
+    if (pointerFunctions.acquireFunction == NULL) {
+      return NO;
+    }
     if (pointerFunctions.usesWeakReadAndWriteBarriers) {
       // It's weak - we should not touch it
       return NO;
@@ -136,6 +141,9 @@
 
   if ([self.object respondsToSelector:@selector(keyPointerFunctions)]) {
     NSPointerFunctions *pointerFunctions = [self.object keyPointerFunctions];
+    if (pointerFunctions.acquireFunction == NULL) {
+      return NO;
+    }
     if (pointerFunctions.usesWeakReadAndWriteBarriers) {
       return NO;
     }
