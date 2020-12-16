@@ -146,6 +146,7 @@
 		75BF0EAC1C5ADE1B00E0DAB6 /* FBRetainCycleDetectorTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FBRetainCycleDetectorTests-Info.plist"; sourceTree = "<group>"; };
 		75BF0EAD1C5ADE1B00E0DAB6 /* FBRetainCycleDetectorTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBRetainCycleDetectorTests.mm; sourceTree = "<group>"; };
 		75BF0EAE1C5ADE1B00E0DAB6 /* FBStructEncodingParserTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FBStructEncodingParserTests.mm; sourceTree = "<group>"; };
+		EDD23859258ABCCA00F932F2 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +183,7 @@
 		75BF0E0E1C5ADBCC00E0DAB6 = {
 			isa = PBXGroup;
 			children = (
+				EDD23859258ABCCA00F932F2 /* Package.swift */,
 				75069AAD1CD6AEF9001AFCEE /* UIKit.framework */,
 				75BF0E1A1C5ADBCC00E0DAB6 /* FBRetainCycleDetector */,
 				75BF0E281C5ADCA200E0DAB6 /* FBRetainCycleDetectorTests */,
@@ -464,6 +466,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 75BF0E0E1C5ADBCC00E0DAB6;
